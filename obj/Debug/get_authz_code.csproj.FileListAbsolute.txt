@@ -1,0 +1,13 @@
+C:\Users\tommy.wu\source\repos\get_authz_code\obj\Debug\get_authz_code.csprojAssemblyReference.cache
+C:\Users\tommy.wu\source\repos\get_authz_code\obj\Debug\get_authz_code.Form1.resources
+C:\Users\tommy.wu\source\repos\get_authz_code\obj\Debug\get_authz_code.Properties.Resources.resources
+C:\Users\tommy.wu\source\repos\get_authz_code\obj\Debug\get_authz_code.csproj.GenerateResource.cache
+C:\Users\tommy.wu\source\repos\get_authz_code\obj\Debug\get_authz_code.csproj.CoreCompileInputs.cache
+C:\Users\tommy.wu\source\repos\get_authz_code\bin\Debug\get_authz_code.exe.config
+C:\Users\tommy.wu\source\repos\get_authz_code\bin\Debug\get_authz_code.exe
+C:\Users\tommy.wu\source\repos\get_authz_code\bin\Debug\get_authz_code.pdb
+C:\Users\tommy.wu\source\repos\get_authz_code\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tommy.wu\source\repos\get_authz_code\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tommy.wu\source\repos\get_authz_code\obj\Debug\get_authz_code.csproj.CopyComplete
+C:\Users\tommy.wu\source\repos\get_authz_code\obj\Debug\get_authz_code.exe
+C:\Users\tommy.wu\source\repos\get_authz_code\obj\Debug\get_authz_code.pdb
