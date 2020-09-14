@@ -28,16 +28,6 @@ namespace get_authz_code
             var state = "state";
             var nonce = "nonce";
             var scope = "openid";
-            
-            ////var domain = @"https://twu.oktapreview.com/";
-            ////var oktaAuthorizationServer = @"austs0rqqldr1W2b00h7";
-            ////var clientId = @"0oats0ou8iVP2WGpR0h7";
-            ////var rdirectUri = @"http://localhost:8080/authorization-code/callback";
-            ////var redirectUriEncoded = System.Net.WebUtility.UrlEncode(rdirectUri);
-            ////var responseType = "code";
-            ////var state = "state";
-            ////var nonce = "nonce";
-            ////var scope = "openid";
 
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             httpClientHandler.AllowAutoRedirect = false;
