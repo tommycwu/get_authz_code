@@ -45,9 +45,8 @@ namespace get_authz_code
             var httpClientHandler = new HttpClientHandler
             {
                 Proxy = proxy,
+                AllowAutoRedirect = false,
             };
-
-            httpClientHandler.AllowAutoRedirect = false;
 
             using (var httpClient = new HttpClient(httpClientHandler))
             {
