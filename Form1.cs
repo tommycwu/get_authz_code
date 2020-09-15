@@ -17,17 +17,17 @@ namespace get_authz_code
 {
     public partial class Form1 : Form
     {
-        private static async Task<string> GetAuthzCode(string sessionToken)
+        private static string authorizeUri;
+        private static async Task<string> GetAuthzCode(string s, string d, string a, string i, string r, string c, string t, string n, string o)
         {
-            var domain = @"https://tfsciampoc.oktapreview.com/";
-            var oktaAuthorizationServer = @"austimjntkiqGPeQF0h7";
-            var clientId = @"0oatimej1j8kubhRD0h7";
-            var rdirectUri = @"http://localhost:8080/authorization-code/callback";
-            var redirectUriEncoded = System.Net.WebUtility.UrlEncode(rdirectUri);
-            var responseType = "code";
-            var state = "state";
-            var nonce = "nonce";
-            var scope = "openid";
+            var domain = d;
+            var oktaAuthorizationServer = a;
+            var clientId = i;
+            var redirectUriEncoded = System.Net.WebUtility.UrlEncode(r);
+            var responseType = System.Net.WebUtility.UrlEncode(c);
+            var state = t;
+            var nonce = n;
+            var scope = System.Net.WebUtility.UrlEncode(o);
 
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             httpClientHandler.AllowAutoRedirect = false;
@@ -40,8 +40,8 @@ namespace get_authz_code
                     .Add(new MediaTypeWithQualityHeaderValue("*/*"));
 
 
-                var authorizeUri = $"{domain}/oauth2/{oktaAuthorizationServer}/v1/authorize?client_id={clientId}" +
-                    $"&redirect_uri={redirectUriEncoded}&response_type={responseType}&sessionToken={sessionToken}" +
+                authorizeUri = $"{domain}/oauth2/{oktaAuthorizationServer}/v1/authorize?client_id={clientId}" +
+                    $"&redirect_uri={redirectUriEncoded}&response_type={responseType}&sessionToken={s}" +
                     $"&state={state}&nonce={nonce}&scope={scope}";
 
 
@@ -65,7 +65,8 @@ namespace get_authz_code
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            textBox2.Text = await GetAuthzCode(textBox1.Text);
+            textBox2.Text = await GetAuthzCode(textBox1.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text);
+            textBox11.Text = authorizeUri;
         }
     }
 }
