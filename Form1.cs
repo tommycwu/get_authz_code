@@ -29,7 +29,24 @@ namespace get_authz_code
             var nonce = n;
             var scope = System.Net.WebUtility.UrlEncode(o);
 
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var proxy = new WebProxy
+            {
+                Address = new Uri($"http://{proxyHost}:{proxyPort}"),
+                BypassProxyOnLocal = false,
+                UseDefaultCredentials = false,
+
+                // *** These creds are given to the proxy server, not the web server ***
+                Credentials = new NetworkCredential(
+                    userName: proxyUserName,
+                    password: proxyPassword)
+            };
+
+            // Now create a client handler which uses that proxy
+            var httpClientHandler = new HttpClientHandler
+            {
+                Proxy = proxy,
+            };
+
             httpClientHandler.AllowAutoRedirect = false;
 
             using (var httpClient = new HttpClient(httpClientHandler))
